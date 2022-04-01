@@ -59,15 +59,15 @@ def menu():
 # sub_menu works similarly to menu()
 
 def week0_func():
-  title = "Week 0" + banner
+  title = "week 0" + banner
   buildMenu(title, week0_list)
   
 def week1_func():
-  title = "Week 1" + banner
+  title = "week 1" + banner
   buildMenu(title, week1_list)
 
 def week2_func():
-  title = "Week 2" + banner
+  title = "week 2" + banner
   buildMenu(title, week2_list)
 
 

@@ -3,28 +3,27 @@ import time
 # terminal print commands
 ANSI_CLEAR_SCREEN = u"\u001B[2J"
 ANSI_HOME_CURSOR = u"\u001B[0;0H\u001B[2"
-LAND_COLOR = u""
-SHIP_COLOR = u"\u001B[32m\u001B[2D"
+LAND_COLOR = u"\u001b[46;1m\u001B[2D"
+BUNNY_COLOR = u"\u001b[31;1m\u001B[2D"
 RESET_COLOR = u"\u001B[0m\u001B[2D"
 
 def ocean_print():
     # print ocean
     print(ANSI_CLEAR_SCREEN, ANSI_HOME_CURSOR)
-    print("\n\n\n\n")
-    print(OCEAN_COLOR + "  " * 35)
+    print("\n\n\n\n\n\n")
+    print(LAND_COLOR + "  " * 25)
 
 # print ship with colors and leading spaces
 def ship_print(position):
     print(ANSI_HOME_CURSOR)
     print(RESET_COLOR)
     sp = " " * position
-    print(sp + " |￣￣￣￣￣ |   ")
+    print(BUNNY_COLOR + sp + " |￣￣￣￣￣ |   ")
     print(sp + " |   Hello   |   ")
     print(sp + " |___________|   ")
     print(sp + " (\__/) ||    ")
     print(sp + " (•ㅅ•) ||  ")
     print(sp + " / 　 づ  ")
-    print(LAND_COLOR, end="")
     print(RESET_COLOR)
 
 # ship function, iterface into this file
